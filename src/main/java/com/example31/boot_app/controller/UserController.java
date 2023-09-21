@@ -40,7 +40,7 @@ public class UserController {
 
     }
 
-    @PostMapping("/{id}")
+    @DeleteMapping("/{id}")
     public String deleteUser(@PathVariable("id") int id, Model model) {
         userService.delete(id);
         model.addAttribute("user", userService.show(id));
